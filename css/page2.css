@@ -1,0 +1,27 @@
+.top-two-thirds{
+  width: 50%;
+}
+
+/*.wrong-line{
+  animation: pulse 3s infinite;
+}*/
+
+.led2, .crossed-wires, .led2-correction {
+  stroke-opacity: 0;
+  fill-opacity: 0;
+}
+
+@keyframes pulse {
+  0% {
+    stroke-opacity: 0;
+    fill-opacity: 0;
+  }
+  50% {
+    stroke-opacity: 1;
+    fill-opacity: 1;
+  }
+  100% {
+    stroke-opacity: 0;
+    fill-opacity: 0;
+  }
+}
