@@ -1,5 +1,11 @@
 .top-two-thirds{
-  width: 50%;
+  height: 66%;
+  width: 66%;
+  margin: 0 auto;
+}
+
+.page{
+  display: block;
 }
 
 /*.wrong-line{
@@ -35,4 +41,11 @@
     stroke-opacity: 0;
     fill-opacity: 0;
   }
+}
+
+#next{
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 100px;
 }
