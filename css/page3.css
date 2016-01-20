@@ -47,3 +47,22 @@
     fill-opacity: 1;
   }
 }
+
+.pin2-animate{
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    stroke-opacity: 0;
+    fill-opacity: 0;
+  }
+  50% {
+    stroke-opacity: 1;
+    fill-opacity: 1;
+  }
+  100% {
+    stroke-opacity: 0;
+    fill-opacity: 0;
+  }
+}

@@ -18,7 +18,7 @@
         <svg version="1.1" id="circuit" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         	 viewBox="0 0 1402 2103" enable-background="new 0 0 1402 2103" xml:space="preserve">
         <line fill="none" stroke="#E46644" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="7,32" x1="1124.5" y1="648.5" x2="1124.5" y2="726.5"/>
-        <g>
+        <g class="wire-1">
 
         		<polyline fill="none" stroke="#E8A833" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="9.1686,32.0901" points="
         		978,863 1060.5,863 1060.5,1269 408,1269 	"/>
@@ -45,7 +45,7 @@
 
         		<line fill="none" stroke="#E8A833" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="7,32" x1="1060" y1="1070" x2="1267" y2="1070"/>
         </g>
-        <g>
+        <g class="ground">
 
         		<polyline fill="none" stroke="#63E0DC" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="9.1686,32.0901" points="
         		1010,619 985.5,619 985.5,504 1060.5,504 1060.5,418 1192.5,418 1192.5,257 339.5,257 339.5,357 50.5,357 50.5,1740 736,1740 	"/>
@@ -76,7 +76,7 @@
 
         		<line fill="none" stroke="#63E0DC" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="7,32" x1="52" y1="1138" x2="168" y2="1138"/>
         </g>
-        <g>
+        <g class="wire-2">
 
         		<polyline fill="none" stroke="#E46644" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="9.1686,32.0901" points="
         		504,357 702.5,357 702.5,723 1124.5,723 1124.5,1464.5 	"/>
@@ -422,7 +422,7 @@
         		<line fill="none" stroke="#DB9700" stroke-miterlimit="10" x1="545.4" y1="581.4" x2="238.4" y2="617.4"/>
         		<line fill="none" stroke="#DB9700" stroke-miterlimit="10" x1="214.2" y1="598.1" x2="397.4" y2="369.2"/>
         	</g>
-        	<g>
+        	<g class="pin1-pre">
         		<path fill="#DB9700" d="M1285.8,335.7h-3.3c-11.8,0-21.5-9.6-21.5-21.5v-3.3c0-1.3-1.1-2.4-2.4-2.4h-1.5c-1.3,0-2.4,1.1-2.4,2.4
         			v3.3c0,11.8-9.6,21.5-21.5,21.5h-3.4c-1.3,0-2.3,1-2.3,2.3v1.6c0,1.3,1,2.3,2.3,2.3h3.4c11.8,0,21.5,9.6,21.5,21.5v3.4
         			c0,1.3,1,2.3,2.3,2.3h1.6c1.3,0,2.4-1.1,2.4-2.4v-3.3c0-11.8,9.6-21.5,21.5-21.5h3.3c1.3,0,2.4-1.1,2.4-2.4v-1.5
@@ -468,7 +468,7 @@
         			c0,0.8,0.6,1.4,1.4,1.4h0.9c0.8,0,1.5-0.7,1.5-1.5v-2c0-7.1,5.8-12.9,12.9-12.9h2c0.8,0,1.4-0.6,1.4-1.4v-0.9
         			C236.5,1134,235.9,1133.3,235.1,1133.3z"/>
         	</g>
-        	<g>
+        	<g class="pin2-pre">
         		<path fill="#DB9700" d="M451.9,344.5l-6.7,0c-4,0-7.6-2.2-9.6-5.6c-1.7-3-4.2-5.4-7.3-7c-3.4-1.9-5.7-5.4-5.7-9.4v-7.9
         			c0-2.3-1.9-4.5-4.1-4.5h0.3c-2.3,0-3.8,2.2-3.8,4.5v7.9c0,4-2.3,7.6-5.8,9.4c-3.3,1.7-6,4.2-7.8,7.4c-1.9,3.2-5.2,5.3-8.9,5.3
         			h-7.2c-1.3,0-2.5,0.4-3.5,1.1c-3.6,2.8-1,7.8,2.4,7.8l8.3,0c3.7,0,7.1,2.1,8.9,5.3c1.8,3.1,4.6,5.6,7.8,7.4
@@ -567,6 +567,11 @@
 
     $('#next-step').queue("circuitQueue", function(){
       $('#constellation').attr("class", "fade-in");
+    });
+
+    $('#next-step').queue("circuitQueue", function(){
+      $('.pin2-pre').attr("class", "pin2");
+      $('.pin1-pre').attr("class", "pin1");
     });
 
 
