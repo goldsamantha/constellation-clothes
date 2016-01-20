@@ -1,0 +1,49 @@
+.top-two-thirds{
+  width: 40%;
+  margin: 0 auto;
+}
+
+#next-step{
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 150px;
+}
+
+.fade-out{
+  animation: fadeOut 1s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes fadeOut{
+  0% {
+    stroke-opacity: 1;
+    fill-opacity: 1;
+  }
+  100% {
+    stroke-opacity: 0;
+    fill-opacity: 0;
+  }
+}
+
+#constellation{
+  fill-opacity: 0;
+  stroke-opacity: 0;
+}
+
+.fade-in{
+  animation: fadeIn 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn{
+  0% {
+    stroke-opacity: 0;
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-opacity: 1;
+    fill-opacity: 1;
+  }
+}
