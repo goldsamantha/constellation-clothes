@@ -6,10 +6,21 @@
   animation: pulse 3s infinite;
 }*/
 
-.led2, .crossed-wires, .led2-correction {
+.led2, .crossed-wires, .led2-correction, [class*="wire-"], .led-sequin-3, [class*="led-fill"] {
   stroke-opacity: 0;
   fill-opacity: 0;
 }
+
+[class*="led-fill-on"] {
+  animation: pulse 3s infinite;
+  fill: #fff;
+  stroke: #fff;
+}
+
+.led-fill-on-2 {
+  animation: pulse 1s infinite;
+}
+
 
 @keyframes pulse {
   0% {
