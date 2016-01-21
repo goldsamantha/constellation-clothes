@@ -18,9 +18,9 @@
 }
 
 [class*="led-fill-on"] {
-  animation: pulse 3s infinite;
-  fill: #fff;
-  stroke: #fff;
+  animation: pulse 2s infinite;
+  fill: #FFF ;
+  stroke: #FFF;
 }
 
 .led-fill-on-2 {
