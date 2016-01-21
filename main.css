@@ -7,7 +7,7 @@ img{
   max-height: 100vh;
 }
 
-h1, h2{
+h1, h2, p{
   margin: 0 auto;
   width: 100%;
   float: left;
@@ -19,6 +19,15 @@ h1, h2{
 
 h2{
   font-size: 50px;
+}
+
+p{
+  text-align: left;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  position: absolute;
+  bottom:0;
+  font-size: 30px;
 }
 
 .page{
