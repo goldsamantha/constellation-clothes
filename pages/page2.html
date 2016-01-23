@@ -47,8 +47,6 @@
         <g>
         	<g>
 
-        			<line fill="none" stroke="#E46644" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" x1="255" y1="213" x2="255" y2="211"/>
-
         			<path class="wire-1" fill="none" stroke="#E46644" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3.9949,13.9822" d="
         			M255,197V75.5c0-3.6,2.9-6.5,6.5-6.5h439c3.6,0,6.5,2.9,6.5,6.5v196.3c0,3.6-2.9,6.5-6.5,6.5H668"/>
 
@@ -167,13 +165,16 @@
       </div>
 
 
-      <svg version="1.1" id="next" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-      viewBox="0 0 226.6 205.9" enable-background="new 0 0 226.6 205.9" xml:space="preserve">
-      <path fill="#DB9700" d="M157.5,44.8h-1.6c-5.8,0-10.6-4.7-10.6-10.6v-1.6c0-0.7-0.5-1.2-1.2-1.2h-0.7c-0.6,0-1.2,0.5-1.2,1.2v1.6
-      c0,5.8-4.7,10.6-10.6,10.6h-1.7c-0.6,0-1.1,0.5-1.1,1.1v0.8c0,0.6,0.5,1.2,1.2,1.2h1.7c5.8,0,10.6,4.7,10.6,10.6v1.7
-      c0,0.6,0.5,1.1,1.1,1.1h0.8c0.7,0,1.2-0.5,1.2-1.2v-1.6c0-5.8,4.7-10.6,10.6-10.6h1.6c0.6,0,1.2-0.5,1.2-1.2V46
-      C158.7,45.4,158.1,44.8,157.5,44.8z"/>
-      </svg>
+      <div class="next-container">
+        <svg version="1.1" id="next-step" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 150 150" enable-background="new 0 0 150 150" xml:space="preserve">
+        <path fill="#DB9700" d="M142.4,67.6h-7.8C106.3,67.6,83,44.8,83,16V8.2c0-3.4-2.4-5.8-5.8-5.8h-3.4c-2.9,0-5.8,2.4-5.8,5.8V16
+          c0,28.2-22.9,51.6-51.6,51.6H8c-2.9,0-5.4,2.4-5.4,5.4v3.9c0,2.9,2.4,5.8,5.8,5.8h8.3c28.2,0,51.6,22.9,51.6,51.6v8.3
+          c0,2.9,2.4,5.4,5.4,5.4h3.9c3.4,0,5.8-2.4,5.8-5.8v-7.8c0-28.2,22.9-51.6,51.6-51.6h7.8c2.9,0,5.8-2.4,5.8-5.8v-3.4
+          C148.2,70.6,145.3,67.6,142.4,67.6z"/>
+        </svg>
+      </div>
+
     </div>
 
 
@@ -185,34 +186,34 @@
 
   <script type="text/javascript">
     $('.page').css('background-image', 'url("../illo/bg1.svg")');
-    $('#click-node').click(function(){
-      $('#click-node').dequeue("circuitCross");
+    $('#next-step').click(function(){
+      $('#next-step').dequeue("circuitCross");
       console.log("blaah");
     });
 
-    $('#click-node').queue("circuitCross", function(){
+    $('#next-step').queue("circuitCross", function(){
       $('.wire-1').css('stroke-opacity', "1");
       $('.wire-1').css('fill-opacity', "1");
     });
 
 
-    $('#click-node').queue("circuitCross", function(){
+    $('#next-step').queue("circuitCross", function(){
       $(".led-fill-1").first().attr('class', 'led-fill-1 led-fill-on');
     });
 
-    $('#click-node').queue("circuitCross", function(){
+    $('#next-step').queue("circuitCross", function(){
       $('.led2').css('stroke-opacity', "1");
       $('.led2').css('fill-opacity', "1");
     });
 
-    $('#click-node').queue("circuitCross", function(){
+    $('#next-step').queue("circuitCross", function(){
       $('.crossed-wires').css('stroke-opacity', "1");
       $('.crossed-wires').css('fill-opacity', "1");
 
       $(".led-fill-1").attr('class', 'led-fill-1');
     });
 
-    $('#click-node').queue("circuitCross", function(){
+    $('#next-step').queue("circuitCross", function(){
       $('.led2').css('stroke-opacity', "0");
       $('.led2').css('fill-opacity', "0");
       $('.crossed-wires').css('stroke-opacity', "0");
@@ -227,24 +228,20 @@
       $('.led2-correction').css('fill-opacity', "1");
     });
 
-    $('#click-node').queue("circuitCross", function(){
+    $('#next-step').queue("circuitCross", function(){
       $('.led-sequin-3').css('stroke-opacity', "1");
       $('.led-sequin-3').css('fill-opacity', "1");
     });
 
-    $('#click-node').queue("circuitCross", function(){
+    $('#next-step').queue("circuitCross", function(){
       $('.wire-2').css('stroke-opacity', "1");
       $('.wire-2').css('fill-opacity', "1");
       $(".led-fill-2").attr('class', 'led-fill-2 led-fill-on-2');
     });
-    // $('#click-node').queue("circuitCross", function(){
-    //   $('.led2-correction').css('stroke-opacity', "1");
-    //   $('.led2-correction').css('fill-opacity', "1");
-    // });
 
-    $('#next').click(function(){
+    $('#next-step').queue("circuitCross", function(){
       window.location = 'page3.html';
-    })
+    });
 
   </script>
 </html>
